@@ -91,9 +91,8 @@ namespace TP2_Grupo4
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.ForeColor = System.Drawing.Color.DimGray;
             this.textBox1.Location = new System.Drawing.Point(423, 123);
-            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(308, 29);
+            this.textBox1.Size = new System.Drawing.Size(308, 16);
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "USUARIO";
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
@@ -130,9 +129,8 @@ namespace TP2_Grupo4
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.ForeColor = System.Drawing.Color.DimGray;
             this.textBox2.Location = new System.Drawing.Point(423, 187);
-            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(308, 28);
+            this.textBox2.Size = new System.Drawing.Size(308, 16);
             this.textBox2.TabIndex = 2;
             this.textBox2.Text = "CONTRASEÑA";
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
@@ -213,9 +211,9 @@ namespace TP2_Grupo4
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.pictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -31,17 +31,6 @@ namespace TP2_Grupo4
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ciu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -68,89 +57,13 @@ namespace TP2_Grupo4
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cod,
-            this.ciu,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
             this.dataGridView1.Location = new System.Drawing.Point(141, 51);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(647, 387);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // cod
-            // 
-            this.cod.HeaderText = "Codigo";
-            this.cod.Name = "cod";
-            this.cod.Width = 50;
-            // 
-            // ciu
-            // 
-            this.ciu.HeaderText = "Ciudad";
-            this.ciu.Name = "ciu";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Barrio";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Estrellas";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Cantidad de Personas";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "TV";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Tipo";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 50;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Precio por Persona";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Precio por Día";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 50;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Habitaciones";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 40;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Baños";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 40;
             // 
             // button7
             // 
@@ -189,91 +102,124 @@ namespace TP2_Grupo4
             // 
             // textBox1
             // 
+            this.textBox1.ForeColor = System.Drawing.Color.DimGray;
             this.textBox1.Location = new System.Drawing.Point(141, 22);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(45, 23);
             this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "código";
+            this.textBox1.Text = "Código";
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // textBox2
             // 
+            this.textBox2.ForeColor = System.Drawing.Color.DimGray;
             this.textBox2.Location = new System.Drawing.Point(192, 22);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(80, 23);
             this.textBox2.TabIndex = 6;
-            this.textBox2.Text = "ciudad";
+            this.textBox2.Text = "Ciudad";
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // textBox3
             // 
+            this.textBox3.ForeColor = System.Drawing.Color.DimGray;
             this.textBox3.Location = new System.Drawing.Point(278, 22);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(80, 23);
             this.textBox3.TabIndex = 7;
-            this.textBox3.Text = "barrio";
+            this.textBox3.Text = "Barrio";
+            this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
+            this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
             // 
             // textBox4
             // 
+            this.textBox4.ForeColor = System.Drawing.Color.DimGray;
             this.textBox4.Location = new System.Drawing.Point(364, 22);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(50, 23);
             this.textBox4.TabIndex = 8;
-            this.textBox4.Text = "estrellas";
+            this.textBox4.Text = "Estrellas";
+            this.textBox4.Enter += new System.EventHandler(this.textBox4_Enter);
+            this.textBox4.Leave += new System.EventHandler(this.textBox4_Leave);
             // 
             // textBox5
             // 
+            this.textBox5.ForeColor = System.Drawing.Color.DimGray;
             this.textBox5.Location = new System.Drawing.Point(422, 22);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(60, 23);
             this.textBox5.TabIndex = 9;
-            this.textBox5.Text = "can. pers.";
+            this.textBox5.Text = "Can. Pers.";
+            this.textBox5.Enter += new System.EventHandler(this.textBox5_Enter);
+            this.textBox5.Leave += new System.EventHandler(this.textBox5_Leave);
             // 
             // textBox6
             // 
+            this.textBox6.ForeColor = System.Drawing.Color.DimGray;
             this.textBox6.Location = new System.Drawing.Point(488, 22);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(40, 23);
             this.textBox6.TabIndex = 10;
-            this.textBox6.Text = "tv";
+            this.textBox6.Text = "TV";
+            this.textBox6.Enter += new System.EventHandler(this.textBox6_Enter);
+            this.textBox6.Leave += new System.EventHandler(this.textBox6_Leave);
             // 
             // textBox7
             // 
+            this.textBox7.ForeColor = System.Drawing.Color.DimGray;
             this.textBox7.Location = new System.Drawing.Point(534, 22);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(40, 23);
             this.textBox7.TabIndex = 11;
-            this.textBox7.Text = "tipo";
+            this.textBox7.Text = "Tipo";
+            this.textBox7.Enter += new System.EventHandler(this.textBox7_Enter);
+            this.textBox7.Leave += new System.EventHandler(this.textBox7_Leave);
             // 
             // textBox8
             // 
+            this.textBox8.ForeColor = System.Drawing.Color.DimGray;
             this.textBox8.Location = new System.Drawing.Point(580, 22);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(50, 23);
             this.textBox8.TabIndex = 12;
-            this.textBox8.Text = "precio persona";
+            this.textBox8.Text = "Precio Pers.";
+            this.textBox8.Enter += new System.EventHandler(this.textBox8_Enter);
+            this.textBox8.Leave += new System.EventHandler(this.textBox8_Leave);
             // 
             // textBox9
             // 
+            this.textBox9.ForeColor = System.Drawing.Color.DimGray;
             this.textBox9.Location = new System.Drawing.Point(636, 22);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(60, 23);
             this.textBox9.TabIndex = 13;
-            this.textBox9.Text = "precio día";
+            this.textBox9.Text = "Precio Día";
+            this.textBox9.Enter += new System.EventHandler(this.textBox9_Enter);
+            this.textBox9.Leave += new System.EventHandler(this.textBox9_Leave);
             // 
             // textBox10
             // 
+            this.textBox10.ForeColor = System.Drawing.Color.DimGray;
             this.textBox10.Location = new System.Drawing.Point(702, 22);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(40, 23);
             this.textBox10.TabIndex = 14;
-            this.textBox10.Text = "habitaciones";
+            this.textBox10.Text = "Habitaciones";
+            this.textBox10.Enter += new System.EventHandler(this.textBox10_Enter);
+            this.textBox10.Leave += new System.EventHandler(this.textBox10_Leave);
             // 
             // textBox11
             // 
+            this.textBox11.ForeColor = System.Drawing.Color.DimGray;
             this.textBox11.Location = new System.Drawing.Point(748, 22);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(40, 23);
             this.textBox11.TabIndex = 15;
-            this.textBox11.Text = "baños";
+            this.textBox11.Text = "Baños";
+            this.textBox11.Enter += new System.EventHandler(this.textBox11_Enter);
+            this.textBox11.Leave += new System.EventHandler(this.textBox11_Leave);
             // 
             // código
             // 
@@ -336,6 +282,7 @@ namespace TP2_Grupo4
             this.Name = "VistaAdminAlojamientos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VistaAdminAlojamientos";
+            this.Load += new System.EventHandler(this.VistaAdminAlojamientos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -343,8 +290,6 @@ namespace TP2_Grupo4
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
@@ -363,19 +308,9 @@ namespace TP2_Grupo4
         private System.Windows.Forms.DataGridViewTextBoxColumn Ciudad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Barrio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estrellas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ciu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

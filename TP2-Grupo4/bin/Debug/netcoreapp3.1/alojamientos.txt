@@ -1,0 +1,6 @@
+a,a,a,1,1,true,a,1,1,1,1
+b,b,b,2,2,true,b,2,2,2,2
+c,c,c,3,3,false,c,3,3,3,3
+Código,Ciudad,Barrio,Estrellas,Can. Pers.,TV,Tipo,Precio Pers.,Precio Día,Habitaciones,Baños
+a,b,c,5,5,false,d,5,5,5,5
+Código,Ciudad,Barrio,Estrellas,Can. Pers.,TV,Tipo,Precio Pers.,Precio Día,Habitaciones,Baños

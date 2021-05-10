@@ -40,5 +40,30 @@ namespace TP2_Grupo4
         {
             Application.Exit();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            /*foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                string a;
+                string b;
+
+                a = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                b = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
+
+                VistaAdminAlojamientos data = new VistaAdminAlojamientos();
+                foreach (Form frm in Application.OpenForms)
+                {
+                    if (frm.Name == "Form1")
+                    {
+                        data = (VistaAdminAlojamientos)frm;
+                        data.dataGridView1.Rows.Add(a, b);
+
+                        this.Close();
+                        break;
+                    }
+                }
+            }*/
+        }
     }
 }
