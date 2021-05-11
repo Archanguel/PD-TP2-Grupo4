@@ -22,14 +22,78 @@ namespace TP2_Grupo4
         public Login()
         {
             InitializeComponent();
+            new db("");
         }
-
+        string id_nuevo()
+        {
+            var ids = new db("usuarios").Abrir().Select(x => x[0]).ToList();
+            return ids.Count == 1 ? "0" : (int.Parse(ids[ids.Count - 1]) + 1).ToString();
+        }
+        db usuarios = new db("usuarios");
+        string id;
         private void button1_Click(object sender, EventArgs e)
         {
+            StreamReader lectura;
+            string user = textBox1.Text;
+            string pass = textBox2.Text;
+            string cadena;
+            bool encontrado = false;
+            string[] campos = new string[5];
+            char[] separador = { ',' };
+            bool adm = true;
+
+            try
+            {
+                lectura = File.OpenText(Application.StartupPath+"db/usuarios.txt");
+                cadena = lectura.ReadLine();
+                while (cadena != null && encontrado == false)
+                {
+                    campos = cadena.Split(separador);
+                    if (campos[1].Equals(user))
+                    {
+                        if (campos[2].Equals(pass))
+                        {
+                            if (campos[3].Equals(adm))
+                            {
+                                encontrado = true;
+                                ingresoAdmin.Show();
+                                this.Hide();
+                                MessageBox.Show("Bienvenido Admin "+user);
+
+                            }
+                            else
+                            {
+                                encontrado = true;
+                                ingresoCliente.Show();
+                                this.Hide();
+                                MessageBox.Show("Bienvenido Cliente "+user);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("contraseña incorrecta");
+                            cadena = lectura.ReadLine();
+                        }
+                    }
+                    else
+                    {
+                        cadena = lectura.ReadLine();
+                    }
+                }
+                if (encontrado == false)
+                {
+                    MessageBox.Show("usuario incorrecto");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("error");
+            }
+
             //validar si el usuario está correcto
 
             //si es válido y es cliente moverse a la VistaCliente
-            string user = textBox1.Text;
+            /*string user = textBox1.Text;
             string password = textBox2.Text;
             string tempurl = "D:\\usuario\\xampp\\htdocs\\TP2-Grupo4\\usuarios\\" + user + ".txt"; ;
             if (File.Exists(tempurl))
@@ -59,7 +123,7 @@ namespace TP2_Grupo4
             else
             {
                 MessageBox.Show("El usuario no está registrado, por favor vuelva a intentarlo.");
-            }
+            }*/
             //newMDIChild2.Show();
 
             //si es válido y es admin moverse a la VistaAdmin
@@ -67,7 +131,18 @@ namespace TP2_Grupo4
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string user = textBox1.Text;
+            bool bloqueado = false;
+            id = id_nuevo();
+            try
+            {
+                usuarios.Insertar(new List<string>() { id, textBox1.Text, textBox2.Text, (checkBox1.Checked).ToString(), (bloqueado).ToString() });
+                MessageBox.Show("Se ha registrado exitosamente.");
+            }
+            catch
+            {
+                MessageBox.Show("¡Error al ingresar los datos!");
+            }
+            /*string user = textBox1.Text;
             string password = textBox2.Text;
             string tempurl = "D:\\usuario\\xampp\\htdocs\\TP2-Grupo4\\usuarios\\" + user + ".txt";
             if (File.Exists(tempurl))
@@ -80,7 +155,7 @@ namespace TP2_Grupo4
                 MessageBox.Show("Se ha registrado exitosamente.");
                 textBox1.Text = "";
                 textBox2.Text = "";
-            }
+            }*/
         }
 
         private void textBox1_Enter(object sender, EventArgs e)

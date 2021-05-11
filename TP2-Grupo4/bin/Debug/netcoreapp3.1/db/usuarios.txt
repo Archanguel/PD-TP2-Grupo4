@@ -1,0 +1,5 @@
+Id,Usuario,Contraseña,Admin,Bloqueado
+0,asd,asd,True,False
+1,sasa,sasa,False,False
+2,ss,ss,False,False
+3,far,far,True,False
