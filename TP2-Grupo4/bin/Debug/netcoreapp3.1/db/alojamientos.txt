@@ -1,1 +1,5 @@
 Código,Ciudad,Barrio,Estrellas,Cant. Pers.,TV,Tipo,Precio Pers.,Precio Día,Habitaciones,Baños
+11,,s,,,,,,,,
+22,ss,,,,,,,,,
+44,asd,asd,sad,,,,,,,
+60,,,,,,,,,,
